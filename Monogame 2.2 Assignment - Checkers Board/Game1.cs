@@ -54,15 +54,15 @@ namespace Monogame_2._2_Assignment___Checkers_Board
         {
             GraphicsDevice.Clear(Color.Beige);
             _spriteBatch.Begin();
-            for (int i = 0; i < 8; i++) // goes down the grid, allowing the next for loop to fill in each row correctly
+            for (int i = 0; i < 8; i++) 
             {
                 for (int j = (i % 2) * -1; j < 8; j++)
                 {
-                    if ((j + i % 2) % 2 != 0) // if j is odd and i is odd:
+                    if ((j + i % 2) % 2 != 0) 
                     {
                         _spriteBatch.Draw(rectangleTexture, new Rectangle(j * tileSize, i * tileSize, tileSize, tileSize), Color.Black);
                     }
-                    else // if the opposite ^ is true:
+                    else 
                     {
                         _spriteBatch.Draw(rectangleTexture, new Rectangle(j * tileSize, i * tileSize, tileSize, tileSize), Color.Tan);
                     }
